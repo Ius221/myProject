@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape</title>
+    <style>
+      .box {
+        border: 1px solid white;
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: whitesmoke">
+    <center>
+      <h1 style="color: blue">This is Escape game</h1>
+      <h3 class="change">Don't put cursor in the box</h3>
+      <br />
+      <p class="box">
+      </p>
+    </center>
+  </body>
+
+  <script>
+    let box = document.querySelector(".box")
+    let change=document.querySelector(".change")
+    
+    box.addEventListener("mouseenter", (event) => {
+      event.target.style.backgroundColor='Yellow';
+      change.innerHTML='You entered'
+    },10)
+
+    box.addEventListener("mouseout", (event)=>{
+      event.target.style.backgroundColor='Red'
+      change.innerHTML="Now you Can\'t cahnge to default" 
+    },10)
+
+</script>
+</html>
